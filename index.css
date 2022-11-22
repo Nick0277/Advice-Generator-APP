@@ -1,0 +1,136 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: hsla(218, 23%, 16%, 1);
+}
+/* font-family: 'Manrope', sans-serif; */
+
+.template {
+   position: absolute;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 540px;
+   height: 335px;
+   background-color: hsl(217, 19%, 24%);
+   border-radius: 18px;
+   flex-direction: column;
+   font-family: 'Manrope', sans-serif;
+}
+
+.adviceNumber {
+   color: hsl(150, 100%, 66%);
+   letter-spacing: 4px;
+   position: absolute;
+   font-size: 16px;
+   top: 2em;
+}
+
+.advice {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 80%;
+   height: 150px;
+   font-size: 28px;
+   color: lightcyan;
+   text-align: center;
+   word-break: normal;
+   margin-bottom: 2em;
+   animation-name: loadAnim;
+   animation-duration: 0.5s;
+}
+
+.svgContainer {
+   position: absolute;
+   bottom: 4.5em;
+}
+
+.dice {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   width: 65px;
+   height: 65px;
+   background-color: hsl(150, 100%, 66%);
+   border-radius: 100%;
+   bottom: -2em;
+   transition-duration: 0.4s;
+   cursor: pointer;
+}
+
+@media (hover: hover) {
+   .dice:hover {
+      box-shadow: -2px 2px 41px -1px rgba(82, 255, 168, 1);
+      -webkit-box-shadow: -2px 2px 41px -1px rgba(82, 255, 168, 1);
+      -moz-box-shadow: -2px 2px 41px -1px rgba(82, 255, 168, 1);
+   }
+}
+
+@keyframes loadAnim {
+   0% {
+      opacity: 0;
+   }
+
+   35% {
+      opacity: 0;
+      filter: blur(10px);
+   }
+
+   100% {
+      opacity: 1;
+      filter: blur(0px);
+   }
+}
+
+.load {
+   animation-name: loadAnim;
+   animation-duration: 0.5s;
+}
+
+@media screen and (max-width: 430px) {
+   .content {
+      width: 390px;
+      height: 335px;
+   }
+
+   .advice {
+      font-size: 25px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   .content {
+      width: 360px;
+      height: 335px;
+   }
+
+   .advice {
+      margin-bottom: 1em;
+   }
+}
+
+@media screen and (max-width: 380px) {
+   .content {
+      width: 340px;
+      height: 330px;
+   }
+}
+
+@media screen and (max-width: 365px) {
+   .content {
+      width: 320px;
+      height: 330px;
+   }
+}
